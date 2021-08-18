@@ -1,0 +1,32 @@
+{% extends "main/base.html" %}
+
+
+
+{% block style %}
+{% endblock %}
+
+
+{% block title %}
+<title>Confirm {{ action|title }}</title>
+{% endblock %}
+
+
+{% block header %}
+{% endblock %}
+
+
+{% block content %}
+<section class="form-container">
+  <form class="form-content" action="{{ next }}" method="post">
+    <h2>Confirm {{ action|title }}</h2>
+    <p>Are you sure you want to {% if action %}{{ action|lower }} {% if this %}<a href="{{ this }}">this</a>{% else %}this{% endif %}{% else %}continue with this{% endif %}?</p>
+    {% include "utils/create-form.html" with form=form %}
+
+    <div class="action">
+      <a href="{{ prev }}"><button type="button">Cancel</button></a>
+      <button type="submit">Confirm</button>
+    </div>
+  </form>
+</section>
+{% endblock %}
+

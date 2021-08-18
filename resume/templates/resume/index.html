@@ -1,0 +1,325 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+
+
+{% block styles %}
+{% endblock %}
+
+
+{% block title %}
+<title>Banjoko Judah</title>
+{% endblock %}
+
+
+{% block header %}
+<nav class="nav">
+  <span class="nav-logo"><button class="tab-btn" type="button" data-tab-name="tab-bio">Banjoko Judah</button></span>
+  <ul class="nav-list">
+    <li class="nav-list-item"><button class="tab-btn" type="button" data-tab-name="tab-resume">Resume</button></li>
+    <li class="nav-list-item"><button class="tab-btn" type="button" data-tab-name="tab-portfolio">Portfolio</button></li>
+    <li class="nav-list-item"><button class="tab-btn" type="button" data-tab-name="tab-contact">Contact</button></li>
+  </ul>
+</nav>
+{% endblock %}
+
+
+{% block content %}
+<section>
+  <div class="container alpha">
+    {% if messages %}
+    <div class="content no-pad">
+      {% for msg in messages %}
+      <div class="flash flash-{{ msg.level_tag }}" role="alert">{{ msg.message }}</div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- BIO -->
+<section id="tab-bio" class="tab hidden-tab">
+  <div class="container">
+    <div class="content"><h2>Bio</h2></div>
+  </div>
+</section>
+<!-- END OF BIO -->
+
+
+<!-- RESUME -->
+<section id="tab-resume" class="tab hidden-tab">
+  <div class="container">
+    <div class="content"><h2>Experience</h2></div>
+
+    <ul class="content card-list">
+      <li class="card">
+        <a href="#"><img src="{% static 'resume/img/blank.png' %}"></a>
+        <span class="card-main">
+          <span class="card-title">Technical Writer</span>
+          <span class="card-sub-title">Freelancer<span>Feb 2021 - Present</span></span>
+          <ul class="card-items">
+            <li>Took freelancing jobs on sites like Fiverr.com.</li>
+          </ul>
+        </span>
+      </li>
+
+      <li class="card">
+        <a href="https://internship.zuri.team/"><img src="{% static 'resume/img/hngi-logo.png' %}"></a>
+        <span class="card-main">
+          <span class="card-title">Backend Developer</span>
+          <span class="card-sub-title"><a href="https://internship.zuri.team/">Hotels.ng</a><span>Apr 2020 - Jul 2020</span></span>
+          <ul class="card-items">
+            <li>Worked on developing a scalable ledger solution app that focuses on small and medium sized businesses.</li>
+            <li>Managed a project with a team of 10+ interns in designing and implementing web templates that got sold on Envato.com.</li>
+          </ul>
+        </span>
+      </li>
+
+      <li class="card">
+        <a href="#"><img src="{% static 'resume/img/muse-logo.png' %}"></a>
+        <span class="card-main">
+          <span class="card-title">Data Scientist</span>
+          <span class="card-sub-title"><a href="">Muse Wearables</a><span>Oct 2019 - Feb 2020</span></span>
+          <ul class="card-items">
+            <li>Responsible for researching and developing an alternative payment verication method, drawing inspiration from Apple's FaceID system.</li>
+            <li>Worked closely with the C.T.O and other team members in developing an AI-powered Influencer App.</li>
+          </ul>
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="content"><h2>Volunteer</h2></div>
+
+    <ul class="content card-list">
+      <li class="card">
+        <a href="#"><img src="{% static 'resume/img/dsc-logo.png' %}"></a>
+        <span class="card-main">
+          <span class="card-title">Python & Data Science Tutor</span>
+          <span class="card-sub-title"><a href="">Google Developer's Student Club (DSC)</a><span>Feb 2020 - Present</span></span>
+          <ul class="card-items">
+            <li>Volunteered as a Python & Data Science tutor. Was tasked with creating lesson plans and reviewing student-members submissions.</li>
+            <li>Collaborated with a different branch of the club in organizing their yearly hackathon event.</li>
+          </ul>
+        </span>
+      </li>
+
+      <li class="card">
+        <a href="#"><img src="{% static 'resume/img/gads-logo.png' %}"></a>
+        <span class="card-main">
+          <span class="card-title">Mobile Web Specialist (MWS) Mentor</span>
+          <span class="card-sub-title"><a href="">Google Associate Developer's Scholarship (GADS)</a><span>Aug 2021 - Present</span></span>
+          <ul class="card-items">
+            <li>Volunteered and mentored participants of a scholarship program in web development.</li>
+            <li>Was tasked with answering questions concerning the course and regularly checking-up on their progress.</li>
+          </ul>
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="content"><h2>Training</h2></div>
+
+    <ul class="content card-list">
+      <li class="card">
+        <a class="icon" href="#"><img src="{% static 'resume/img/blank.png' %}"></a>
+        <span class="card-main">
+          <span class="card-title">Google Professional Certificate: Project Management</span>
+          <span class="card-sub-title"><a href="">Google | Coursera</a><span>2021</span></span>
+        </span>
+      </li>
+
+      <li class="card">
+        <a class="icon" href="https://internship.zuri.team/"><img src="{% static 'resume/img/zuri-logo.png' %}"></a>
+        <span class="card-main">
+          <span class="card-title">Backend Development</span>
+          <span class="card-sub-title"><a href="https://internship.zuri.team/">Zuri x I4G Training</a><span>2021</span></span>
+        </span>
+      </li>
+
+      <li class="card">
+        <a class="icon" href="#"><img src="{% static 'resume/img/blank.png' %}"></a>
+        <span class="card-main">
+          <span class="card-title">Natural Language Processing</span>
+          <span class="card-sub-title"><a href="">Deeplearning.ai | Coursera</a><span>2020</span></span>
+        </span>
+      </li>
+
+      <li class="card">
+        <a class="icon" href="#"><img src="{% static 'resume/img/blank.png' %}"></a>
+        <span class="card-main">
+          <span class="card-title">Deep Learning</span>
+          <span class="card-sub-title"><a href="">Deeplearning.ai | Coursera</a><span>2019</span></span>
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="content"><h2>Education</h2></div>
+
+    <ul class="content card-list">
+      <li class="card">
+        <a class="icon" href="#"><img src="{% static 'resume/img/unilag-logo.jpg' %}"></a>
+        <span class="card-main">
+          <span class="card-title">Bachelor of Science</span>
+          <span class="card-sub-title"><a href="">University of Lagos</a><span>Present</span></span>
+        </span>
+      </li>
+    </ul>
+  </div>
+</section>
+<!-- END OF RESUME -->
+
+
+<!-- PORTFOLIO -->
+<section id="tab-portfolio" class="tab hidden-tab">
+  <div class="container">
+    <div class="content"><h2>Personal Project</h2></div>
+
+    <ul class="content card-list">
+      <li class="card">
+        <span class="card-main">
+          <span class="card-title">Medium Articles</span>
+          <span class="card-desc">You can check my medium page for some articles that I have written both personally and for medium publications.</span>
+          <span class="card-h-lists">Medium, Grammarly, Github Gist</span>
+          <span class="card-foot"><a href="https://banjokojudah.medium.com/">View on Medium</a></span>
+        </span>
+      </li>
+
+      <li class="card">
+        <span class="card-main">
+          <span class="card-title">Quiz Central</span>
+          <span class="card-desc">A quiz app that enables easy creation and taking of online quizzes.</span>
+          <span class="card-h-lists">Django, Git, Heroku, Unittest</span>
+          <span class="card-foot"><a href="https://quiz-central.herokuapp.com/">Goto Site</a></span>
+        </span>
+      </li>
+
+      <li class="card">
+        <span class="card-main">
+          <span class="card-title">Tabularise</span>
+          <span class="card-desc">This app provides templates for properly displaying anything that can be arranged on a digital table (eg. leaderboard, employees report, ranking).</span>
+          <span class="card-h-lists">Flask, Jinja2, Pandas, Beautiful Soup, Git, Heroku, Unittest</span>
+          <span class="card-foot"><a href="https://tabularise.herokuapp.com/">Goto Site</a></span>
+        </span>
+      </li>
+
+      <li class="card">
+        <span class="card-main">
+          <span class="card-title">OutIn</span>
+          <span class="card-desc">A real-time chat app with a focus on making virtual meetings and events much easier.</span>
+          <span class="card-h-lists">Flask, Jinja2, SocketIO, Git, Heroku, Unittest</span>
+          <span class="card-foot"><a href="https://infinite-world.herokuapp.com/">Goto Site</a></span>
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="content"><h2>Skill</h2></div>
+
+    <ul class="content card-list">
+      <li class="card">
+        <span class="card-main">
+          <span class="card-title">Language</span>
+          <span class="card-h-lists">Python, Java, Javascript, HTML&CSS</span>
+        </span>
+      </li>
+
+      <li class="card">
+        <span class="card-main">
+          <span class="card-title">Framework | Library</span>
+          <span class="card-h-lists">Flask, Django, Jinja2, Pytorch, Keras, Pandas, OpenCV, Scikit-Learn, Music21, Beautiful Soup, Unittest</span>
+        </span>
+      </li>
+
+      <li class="card">
+        <span class="card-main">
+          <span class="card-title">Tool | Software</span>
+          <span class="card-h-lists">Git, GitHub, Heroku, SocketIO, Jupyter Notebook, Anaconda, Slack, Zoom, Microsoft Office</span>
+        </span>
+      </li>
+
+      <li class="card">
+        <span class="card-main">
+          <span class="card-title">Soft Skill</span>
+          <span class="card-h-lists">Project management, Agile, Scrum, Communication, Writing, Research, Adaptability, Critical thinking, Desire to learn, Flexibility, Innovation, Logical thinking, Problem solving, Team player, Organization, Planning, Teamwork, Collaboration</span>
+        </span>
+      </li>
+
+      <li class="card">
+        <span class="card-main">
+          <span class="card-title">Interest</span>
+          <span class="card-h-lists">Artificial Intelligence, AR & VR, Self-Driving Cars, Tutoring, Open Source</span>
+        </span>
+      </li>
+    </ul>
+  </div>
+</section>
+<!-- END OF PORTFOLIO -->
+
+
+<!-- CONTACT -->
+<section id="tab-contact" class="tab hidden-tab">
+  <div class="container">
+    <div class="content"><h2>Contact</h2></div>
+
+    <ul class="content card-list">
+      <li class="card">
+        <ul class="card-items">
+          <li><span class="card-sub-title">Email: <a href="mailto:banjokojudah@gmail.com">banjokojudah@gmail.com</a></span></li>
+          <li><span class="card-sub-title">Phone: +234 8088224948</span></li>
+          <li><span class="card-sub-title">Linkedin: <a href="https://linkedin.com/in/banjoko-judah">linkedin.com/in/banjoko-judah</a></span></li>
+          <li><span class="card-sub-title">Github: <a href="https://github.com/judahsemi">@judahsemi</a></span></li>
+          <li><span class="card-sub-title">Stack Overflow: <a href="https://stackoverflow.com/users/8047535/nerveless-child">@nerveless-child</a></span></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</section>
+<!-- END OF CONTACT -->
+
+
+<section id="contact-form">
+  <section class="form-container container omega">
+    <form class="form-content content no-pad" action="" method="post">
+      <h2>Send Me A Message</h2>
+      {% include "utils/create-form.html" with form=form %}
+      <input type="hidden" name="tab" value="{% if tab %}{{ tab }}{% else %}tab-resume{% endif %}">
+
+      <div class="action">
+        <button type="submit">Send</button>
+      </div>
+    </form>
+  </section>
+</section>
+{% endblock %}
+
+
+{% block scripts %}
+<script type="text/javascript" src="{% static 'main/js/jquery-3.6.0.min.js' %}"></script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    var start_tab_name = $("input[name=tab]").val();
+    $("#"+start_tab_name).removeClass("hidden-tab");
+
+    $(".tab-btn").on("click", switch_to_tab);
+    function switch_to_tab() {
+      tab_name = this.getAttribute("data-tab-name");
+      if ($("#"+tab_name).css("display") != "none") {
+        $("input[name=tab]").val(tab_name);
+        return null;
+      }
+
+      $(".tab").addClass("hidden-tab");
+      $("#"+tab_name).removeClass("hidden-tab");
+      $("input[name=tab]").val(tab_name);
+    }
+  });
+</script>
+{% endblock %}
+
